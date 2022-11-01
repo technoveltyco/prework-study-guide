@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- HTML <meta> Tag
+            Pre-HTML5 there were many meta attributes, but since HTML5, the only allowed attributes are:
+
+            - charset :     specifies the character encoding for the HTML document.
+            - content :     specifies the value associated with the hhtp-equiv or name attributes.
+            - http-equiv:   provides an HTTP header definition for the given content value attribute.
+                            The allowed content values are: 
+                            - content-security-policy
+                            - content-type
+                            - default-style
+                            - refresh
+            - name:         specifies a name for the metadata.
+                            Allowed content values are:
+                            - application-name
+                            - author
+                            - description
+                            - generator
+                            - keywords
+                            - viewport
+        -->
+        <!-- 
+            - The meta "charset" attribute must be defined at the first 1024 bytes of the document. 
+            - It is a synomym of the pre-HTML5 <meta http-equiv="Content-Type" content="text/html; charset=_IANAcharset_">
+            - In HTML5 documents, it should be used the charset attribute with the encoding UTF-8.
+        -->
+        <meta charset="UTF-8" />
+        <!-- 
+            - The meta "http-equiv" attribute is a pragma directive to define HTTP headers.
+            - The "content-type" should be used to define MIME types of documents that are different from HTML,  
+              like XML, or in cases where the HTML document requires pre-HTML5 compatibility.
+            - Again, the "content-type" should be defined at the first 1024 bytes of the document. Moreover, 
+              the charset should be the same as the document encoding, but in HTML5 is recommended to use UTF-8.
+            - If you should use either the meta "charset" of http-equiv "content-type", but not both in the same document.
+        -->
+        <!-- <meta http-equiv="content-type" content="text/html; charset=UTF-8" /> -->
+        <!--
+            - The meta content-security-policy specifies a CSP header for the current document.
+            - See https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP for more information about CSP policies.
+        -->
+        <meta http-equiv="content-security-policy" content="default-src 'self'" />
+        <!--
+            - The meta "refresh" defines the time interval in miliseconds to refresh the document.
+            - Its use is not recommended because it breaks the compliance with accessibility guidelines.
+              See https://www.w3.org/WAI/standards-guidelines/wcag/ for further information about accessibility guidelines.
+        -->
+        <!-- <meta http-equiv="refresh" content="0" /> -->
+        <!--
+            - 
+        -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>The HTML Structure Study Guide</title>
+    </head>
+</html>
